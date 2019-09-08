@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ABN.Data.Database", "ABN.Data.Database.sqlproj", "{25B1EA02-631F-47DB-8D8E-73E1420BC5FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABN.EmployeePortal", "..\ABN.EmployeePortal\ABN.EmployeePortal.csproj", "{3EA9DCC8-DBCF-434B-BAF0-CA92AB5F2711}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABN.UI.EmployeePortal", "ABN.EmployeePortal\ABN.EmployeePortal.csproj", "{3EA9DCC8-DBCF-434B-BAF0-CA92AB5F2711}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ABN.Data.LocalDB", "..\ABN.Data.LocalDB\ABN.Data.LocalDB.csproj", "{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ABN.Data.LocalDB", "ABN.Data.LocalDB\ABN.Data.LocalDB.csproj", "{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
