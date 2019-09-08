@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LBNL734121</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAbq7J1oIRz0mslB/Zf7JVBQAAAAACAAAAAAADZgAAwAAAABAAAABsDtJvhIPTufZ7VgfTNm92AAAAAASAAACgAAAAEAAAACfkmQQyS6zUmlZTJnqeD7KIAAAAqtJZL226eiJyQMiw4u8AV6porcIjpq39S6Y2OcXxMmvPutjFpc+2sl/zq1ukkDezo9DPLwUO/V2Pktua6/O0qJRnS5IupoBzplByPHH/0FuZ+uM0WTF2LlYsRGyIacmwcCwfU6r8r2wcWRgp3nmuLEJ2dzGwH2DcjUpr0hBQzJWTkSwjZo4CfxQAAACOZYJd5m0mx6y1xvMNvQexhGOz4g==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAbq7J1oIRz0mslB/Zf7JVBQAAAAACAAAAAAADZgAAwAAAABAAAABQcVE+qXWANl8OmCONASNwAAAAAASAAACgAAAAEAAAAGgukawP3Sl9uKcovI8nY9qIAAAAj/5/+JA0I2O8SKKSoUXi0QX6pPjRR9nGxu/qfcZfWF8U5ZIDaYnq++lEVptEbT6PYvfeG+h9eRcwhFRAgfHidYbITRJYKrJu4p7y+pomQFTu1bwVzCvz5Gx1uSPprRqiKubOsgx1jojC1cIucSVIP/iONGX1JXl9MfmuBmapISfQk0Fwf/lTJxQAAAA6rE2/urb1YAZv9+/kKbDdVzLSlQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,17 +42,17 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">10</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{7FB906D3-498F-4CE3-8984-8C54366B82DF}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E4C5F730-E993-49EE-9319-5479788F550D}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="CM.(localdb)\MSSQLLocalDB.C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF.ConnectByProxy">
+                <SSIS:Parameter SSIS:Name="CM.(localdb)MSSQLLocalDB.ConnectByProxy">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -67,7 +67,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.(localdb)\MSSQLLocalDB.C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF.ConnectionString">
+                <SSIS:Parameter SSIS:Name="CM.(localdb)MSSQLLocalDB.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -78,11 +78,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ABNEmployeeCRM;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{107A6FA8-FF76-49C6-B1AA-8AEBE6C4310F}(localdb)MSSQLLocalDB;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.(localdb)\MSSQLLocalDB.C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF.ConnectUsingManagedIdentity">
+                <SSIS:Parameter SSIS:Name="CM.(localdb)MSSQLLocalDB.ConnectUsingManagedIdentity">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -97,7 +97,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.(localdb)\MSSQLLocalDB.C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF.InitialCatalog">
+                <SSIS:Parameter SSIS:Name="CM.(localdb)MSSQLLocalDB.InitialCatalog">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -108,11 +108,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">ABNEmployeeCRM</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.(localdb)\MSSQLLocalDB.C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF.Password">
+                <SSIS:Parameter SSIS:Name="CM.(localdb)MSSQLLocalDB.Password">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -126,7 +126,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.(localdb)\MSSQLLocalDB.C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF.RetainSameConnection">
+                <SSIS:Parameter SSIS:Name="CM.(localdb)MSSQLLocalDB.RetainSameConnection">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -141,7 +141,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.(localdb)\MSSQLLocalDB.C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF.ServerName">
+                <SSIS:Parameter SSIS:Name="CM.(localdb)MSSQLLocalDB.ServerName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -156,7 +156,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.(localdb)\MSSQLLocalDB.C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF.UserName">
+                <SSIS:Parameter SSIS:Name="CM.(localdb)MSSQLLocalDB.UserName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -181,7 +181,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\SMANILAL\source\repos\ABN-EmployeeImport\abn-employeeimport\ABN.UI.EmployeePortal\Uploads\EmployeeImport.xls;Extended Properties="Excel 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\SMANILAL\source\repos\ABN-EmployeeImport\abn-employeeimport\ABN.UI.EmployeePortal\Uploads\EmployeeImport.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

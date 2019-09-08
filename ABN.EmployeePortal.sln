@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ABN.Data.LocalDB", "ABN.Data.LocalDB\ABN.Data.LocalDB.csproj", "{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}"
-EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ABN.Data.Database", "ABN.Data.Database\ABN.Data.Database.sqlproj", "{25B1EA02-631F-47DB-8D8E-73E1420BC5FE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ABN.EmployeePortal", "ABN.UI.EmployeePortal\ABN.EmployeePortal.csproj", "{935961F8-17C3-4B17-8ED7-744D32A7E589}"
 EndProject
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ABN.Data.SSIS", "ABN.Data.SSIS\ABN.Data.SSIS.dtproj", "{8D649C8E-A22A-47CB-A095-87C66923F547}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABN.Data.Dal", "ABN.Data.Dal\ABN.Data.Dal.csproj", "{7385225A-BB30-4264-8B11-78874057E88D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ABN.Data.EF", "ABN.Data.EF\ABN.Data.EF.csproj", "{887225A1-BBBF-4102-BD56-2E1BC2AC3A4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,12 +20,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}.Development|Any CPU.ActiveCfg = Debug|Any CPU
-		{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}.Development|Any CPU.Build.0 = Debug|Any CPU
-		{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}.Release|Any CPU.Build.0 = Release|Any CPU
 		{25B1EA02-631F-47DB-8D8E-73E1420BC5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{25B1EA02-631F-47DB-8D8E-73E1420BC5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25B1EA02-631F-47DB-8D8E-73E1420BC5FE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -45,6 +41,18 @@ Global
 		{8D649C8E-A22A-47CB-A095-87C66923F547}.Development|Any CPU.Build.0 = Development
 		{8D649C8E-A22A-47CB-A095-87C66923F547}.Release|Any CPU.ActiveCfg = Development
 		{8D649C8E-A22A-47CB-A095-87C66923F547}.Release|Any CPU.Build.0 = Development
+		{7385225A-BB30-4264-8B11-78874057E88D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7385225A-BB30-4264-8B11-78874057E88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7385225A-BB30-4264-8B11-78874057E88D}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{7385225A-BB30-4264-8B11-78874057E88D}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{7385225A-BB30-4264-8B11-78874057E88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7385225A-BB30-4264-8B11-78874057E88D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{887225A1-BBBF-4102-BD56-2E1BC2AC3A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{887225A1-BBBF-4102-BD56-2E1BC2AC3A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{887225A1-BBBF-4102-BD56-2E1BC2AC3A4D}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{887225A1-BBBF-4102-BD56-2E1BC2AC3A4D}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{887225A1-BBBF-4102-BD56-2E1BC2AC3A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{887225A1-BBBF-4102-BD56-2E1BC2AC3A4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

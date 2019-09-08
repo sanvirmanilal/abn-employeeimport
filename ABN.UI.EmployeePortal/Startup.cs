@@ -1,8 +1,11 @@
+using ABN.Data.Dal;
+using ABN.Data.EF;
+using ABN.Data.EF.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -22,6 +25,12 @@ namespace ABN.EmployeePortal
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=ABNEmployeeCRM;Trusted_Connection=True;ConnectRetryCount=0";
+            services.AddDbContext<ABNEmployeeCRMContext>
+                (options => options.UseSqlServer(connection));
+
+            services.AddSingleton(typeof(IRepository<>), typeof(EmployeeDAL)); 
+
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -32,6 +41,8 @@ namespace ABN.EmployeePortal
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

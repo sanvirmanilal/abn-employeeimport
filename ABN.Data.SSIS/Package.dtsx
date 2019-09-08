@@ -11,19 +11,19 @@
   DTS:LocaleID="1043"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{6E48C6A2-A9AB-4BA1-98AB-A9F86F726437}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{E4C5F730-E993-49EE-9319-5479788F550D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF]"
+      DTS:refId="Package.ConnectionManagers[(localdb)MSSQLLocalDB]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{B9AA6D4C-1B47-4EC1-A36D-7D0F5624FD1F}"
-      DTS:ObjectName="(localdb)\MSSQLLocalDB.C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF">
+      DTS:DTSID="{107A6FA8-FF76-49C6-B1AA-8AEBE6C4310F}"
+      DTS:ObjectName="(localdb)MSSQLLocalDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ABNEmployeeCRM;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{107A6FA8-FF76-49C6-B1AA-8AEBE6C4310F}(localdb)MSSQLLocalDB;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -274,8 +274,8 @@ FROM     [Sheet1$]</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF]"
-                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.C:\USERS\SMANILAL\SOURCE\REPOS\ABN-EMPLOYEEIMPORT\ABN-EMPLOYEEIMPORT\ABN.DATA.LOCALDB\ABNEMPLOYEEDATABASE.MDF]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)MSSQLLocalDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)MSSQLLocalDB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -396,7 +396,7 @@ FROM     [Sheet1$]</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{B9AA6D4C-1B47-4EC1-A36D-7D0F5624FD1F}"
+          SQLTask:Connection="{107A6FA8-FF76-49C6-B1AA-8AEBE6C4310F}"
           SQLTask:BypassPrepare="False"
           SQLTask:SqlStatementSource="exec sp_UpdateNewEmployeeSalaries" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
