@@ -29,8 +29,6 @@ namespace ABN.EmployeePortal
             services.AddDbContext<ABNEmployeeCRMContext>
                 (options => options.UseSqlServer(connection));
 
-            services.AddSingleton(typeof(IRepository<>), typeof(EmployeeDAL)); 
-
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

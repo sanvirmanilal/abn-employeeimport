@@ -6,14 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ABN.EmployeePortal.Web_API
 {
-    [Route("api/[controller]")]
     public class EmployeeController : Controller
     {
         private IRepository<Employee> _repository;
 
-        public EmployeeController(IRepository<Employee> repository)
+        public EmployeeController()
         {
-            _repository = repository;
+            _repository = new EmployeeDAL();
         }
 
         [HttpGet]
