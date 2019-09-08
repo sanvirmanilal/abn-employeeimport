@@ -7,7 +7,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ABN.Data.Database", "ABN.Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABN.EmployeePortal", "..\ABN.EmployeePortal\ABN.EmployeePortal.csproj", "{3EA9DCC8-DBCF-434B-BAF0-CA92AB5F2711}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABN.Data.LocalDB", "..\ABN.DB\ABN.Data.LocalDB.csproj", "{B4F2FE00-66DA-4603-A09A-F3AA9AE254F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ABN.Data.LocalDB", "..\ABN.Data.LocalDB\ABN.Data.LocalDB.csproj", "{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,10 @@ Global
 		{3EA9DCC8-DBCF-434B-BAF0-CA92AB5F2711}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EA9DCC8-DBCF-434B-BAF0-CA92AB5F2711}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EA9DCC8-DBCF-434B-BAF0-CA92AB5F2711}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4F2FE00-66DA-4603-A09A-F3AA9AE254F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4F2FE00-66DA-4603-A09A-F3AA9AE254F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4F2FE00-66DA-4603-A09A-F3AA9AE254F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4F2FE00-66DA-4603-A09A-F3AA9AE254F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59DF12C6-EFF8-45BA-BB95-E0E887E46B28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
