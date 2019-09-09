@@ -15,46 +15,36 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_router_dom_1 = require("react-router-dom");
-//here declaring the EmployeeList class. And this EmployeeList class inherits the abstract class React.Component
 var EmployeeList = /** @class */ (function (_super) {
     __extends(EmployeeList, _super);
-    //Declaring the constructor 
     function EmployeeList() {
-        var _this = 
-        //here we are calling base class constructor using super()
-        _super.call(this, '') || this;
-        //here we are intializing the interface's fields using default values.
+        var _this = _super.call(this, '') || this;
         _this.state = { EmployeeListData: [], loading: true };
-        //this fetch method is responsible to get all the Employee record using web api.
         fetch('api/Employee/Index')
             .then(function (response) { return response.json(); })
             .then(function (data) {
-            debugger;
             _this.setState({ EmployeeListData: data, loading: false });
         });
         _this.FuncDelete = _this.FuncDelete.bind(_this);
         _this.FuncEdit = _this.FuncEdit.bind(_this);
         return _this;
     }
-    //this method will render html onto the DOM.
     EmployeeList.prototype.render = function () {
         var contents = this.state.loading
             ? React.createElement("p", null,
                 React.createElement("em", null, "Loading..."))
-            : this.renderEmployeeTable(this.state.EmployeeListData); //this renderEmployeeTable method will return the HTML table. This table will display all the record.
+            : this.renderEmployeeTable(this.state.EmployeeListData);
         return React.createElement("div", null,
             React.createElement("h1", null, "Employee Record"),
             React.createElement("p", null,
                 React.createElement(react_router_dom_1.Link, { to: "/addEmployee" }, "Create New")),
             contents);
     };
-    // this method will be responsible for deleting the Employee record.
     EmployeeList.prototype.FuncDelete = function (id) {
         var _this = this;
-        if (!confirm("Do you want to delete Employee with this Id: " + id))
+        if (!window.confirm("Do you want to delete Employee with this Id: " + id))
             return;
         else {
-            //this fetch method will get the specific Employee record using Employee id.
             fetch('api/Employee/Delete/' + id, {
                 method: 'delete'
             }).then(function (data) {
@@ -66,11 +56,9 @@ var EmployeeList = /** @class */ (function (_super) {
             });
         }
     };
-    //this method will responsible for editing the specific Employee record.
     EmployeeList.prototype.FuncEdit = function (id) {
         this.props.history.push("/Employee/edit/" + id);
     };
-    //this method will return the html table to display all the Employee record with edit and delete methods.
     EmployeeList.prototype.renderEmployeeTable = function (EmployeeListData) {
         var _this = this;
         return React.createElement("table", { className: 'table' },

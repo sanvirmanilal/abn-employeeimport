@@ -17,7 +17,7 @@ namespace ABN.Data.EF.Migrations
                     LastName = table.Column<string>(maxLength: 255, nullable: true),
                     Age = table.Column<int>(nullable: true),
                     Salary = table.Column<decimal>(type: "money", nullable: true),
-                    LengthOfEmployment = table.Column<decimal>(type: "decimal(3, 2)", nullable: true)
+                    LengthOfEmployment = table.Column<decimal>(type: "decimal(5, 2)", nullable: true)
                 },
                 constraints: table =>
                 {

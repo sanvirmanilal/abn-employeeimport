@@ -14,13 +14,10 @@ export class AddEmployee extends React.Component<RouteComponentProps<{}>, AddEmp
     constructor(props) {
         super(props);
 
-        //here we are intializing the interface's fields with default values.
         this.state = { title: "", loading: true, employeeList: new EmployeeListData };
 
-        //the employeeid variable will get the employee id from URL.
         var employeeid = this.props.match.params["id"];
 
-        //if employeeid is greater than 0 then fetch method will get the specific employee record and display it as in edit mode.
         if (employeeid > 0) {
             fetch('api/Employee/Details/' + employeeid)
                 .then(response => response.json() as Promise<EmployeeListData>)
@@ -35,7 +32,6 @@ export class AddEmployee extends React.Component<RouteComponentProps<{}>, AddEmp
         this.FuncSave = this.FuncSave.bind(this);
         this.FuncCancel = this.FuncCancel.bind(this);
     }
-    //this method will render html onto the DOM.
     public render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
@@ -50,29 +46,26 @@ export class AddEmployee extends React.Component<RouteComponentProps<{}>, AddEmp
 
 
 
-    //this method will save the record into database. If the URL has an EmployeeId, 
-    //then it will update the record and if the URL has not employee id parameter than it will save the record.
     private FuncSave(event) {
         event.preventDefault();
         const data = new FormData(event.target);
-        // PUT request for Edit employee.  
         if (this.state.employeeList.id) {
             fetch('api/Employee/Edit', {
                 method: 'PUT',
                 body: data,
             }).then((response) => response.json())
-                .then((responseJson) => {
-                    this.props.history.push("/employeeList");
-                })
+            {
+                this.props.history.push("/employeeList");
+            }   
         }
         else {
             fetch('api/Employee/Create', {
                 method: 'POST',
                 body: data,
             }).then((response) => response.json())
-                .then((responseJson) => {
-                    this.props.history.push("/employeeList");
-                })
+            {
+                this.props.history.push("/employeeList");
+            }
         }
     }
 
@@ -82,7 +75,6 @@ export class AddEmployee extends React.Component<RouteComponentProps<{}>, AddEmp
         this.props.history.push("/employeeList");
     }
 
-    //this method will return the html table to display all the employee record with edit and delete methods.
     private renderCreateForm() {
         return (
             <form onSubmit={this.FuncSave} >

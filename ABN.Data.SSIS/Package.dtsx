@@ -11,8 +11,8 @@
   DTS:LocaleID="1043"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{E4C5F730-E993-49EE-9319-5479788F550D}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{C6FF4A6C-9033-4F3B-9EBC-9F8E64C44E50}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -33,7 +33,7 @@
       DTS:ObjectName="Excel Connection Manager 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\SMANILAL\source\repos\ABN-EmployeeImport\abn-employeeimport\ABN.UI.EmployeePortal\Uploads\EmployeeImport.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\SMANILAL\source\repos\ABN-EmployeeImport\abn-employeeimport\ABN.Data.SSIS\EmployeeImport.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -343,7 +343,7 @@ FROM     [Sheet1$]</property>
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LengthOfEmployment]"
                       dataType="numeric"
                       name="LengthOfEmployment"
-                      precision="3"
+                      precision="5"
                       scale="2" />
                   </externalMetadataColumns>
                 </input>

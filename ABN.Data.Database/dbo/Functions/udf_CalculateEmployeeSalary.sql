@@ -7,7 +7,7 @@
 CREATE FUNCTION [dbo].[udf_CalculateEmployeeSalary] 
 (
 	@age INT,
-	@lengthOfEmployment DEC(3,2)
+	@lengthOfEmployment DEC(5,2)
 )
 RETURNS MONEY
 AS

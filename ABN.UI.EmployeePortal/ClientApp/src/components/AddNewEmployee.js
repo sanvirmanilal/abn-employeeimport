@@ -19,11 +19,8 @@ var AddEmployee = /** @class */ (function (_super) {
     __extends(AddEmployee, _super);
     function AddEmployee(props) {
         var _this = _super.call(this, props) || this;
-        //here we are intializing the interface's fields with default values.
         _this.state = { title: "", loading: true, employeeList: new EmployeeList_1.EmployeeListData };
-        //the employeeid variable will get the employee id from URL.
         var employeeid = _this.props.match.params["id"];
-        //if employeeid is greater than 0 then fetch method will get the specific employee record and display it as in edit mode.
         if (employeeid > 0) {
             fetch('api/Employee/Details/' + employeeid)
                 .then(function (response) { return response.json(); })
@@ -38,7 +35,6 @@ var AddEmployee = /** @class */ (function (_super) {
         _this.FuncCancel = _this.FuncCancel.bind(_this);
         return _this;
     }
-    //this method will render html onto the DOM.
     AddEmployee.prototype.render = function () {
         var contents = this.state.loading
             ? React.createElement("p", null,
@@ -50,37 +46,32 @@ var AddEmployee = /** @class */ (function (_super) {
             React.createElement("hr", null),
             contents);
     };
-    //this method will save the record into database. If the URL has an EmployeeId, 
-    //then it will update the record and if the URL has not employee id parameter than it will save the record.
     AddEmployee.prototype.FuncSave = function (event) {
-        var _this = this;
         event.preventDefault();
         var data = new FormData(event.target);
-        // PUT request for Edit employee.  
         if (this.state.employeeList.id) {
             fetch('api/Employee/Edit', {
                 method: 'PUT',
                 body: data,
-            }).then(function (response) { return response.json(); })
-                .then(function (responseJson) {
-                _this.props.history.push("/employeeList");
-            });
+            }).then(function (response) { return response.json(); });
+            {
+                this.props.history.push("/employeeList");
+            }
         }
         else {
             fetch('api/Employee/Create', {
                 method: 'POST',
                 body: data,
-            }).then(function (response) { return response.json(); })
-                .then(function (responseJson) {
-                _this.props.history.push("/employeeList");
-            });
+            }).then(function (response) { return response.json(); });
+            {
+                this.props.history.push("/employeeList");
+            }
         }
     };
     AddEmployee.prototype.FuncCancel = function (e) {
         e.preventDefault();
         this.props.history.push("/employeeList");
     };
-    //this method will return the html table to display all the employee record with edit and delete methods.
     AddEmployee.prototype.renderCreateForm = function () {
         return (React.createElement("form", { onSubmit: this.FuncSave },
             React.createElement("div", { className: "form-group row" },

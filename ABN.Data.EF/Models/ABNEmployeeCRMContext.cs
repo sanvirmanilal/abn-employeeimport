@@ -1,5 +1,7 @@
 ﻿using ABN.Data.EF.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+using System;
 
 namespace ABN.Data.EF
 {
@@ -16,6 +18,9 @@ namespace ABN.Data.EF
 
         public virtual DbSet<Employee> Employee { get; set; }
 
+        [DbFunction("udf_CalculateEmployeeSalary", "dbo")]
+        public static decimal CalculateEmployeeSalary(int age, decimal lengthOfEmployment) => throw new NotImplementedException();
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -27,17 +32,35 @@ namespace ABN.Data.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
+           
+            modelBuilder
+               .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
+               .HasAnnotation("Relational:MaxIdentifierLength", 128)
+               .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity<Employee>(entity =>
+            modelBuilder.Entity("ABN.Data.EF.Models.Employee", b =>
             {
-                entity.Property(e => e.FirstName).HasMaxLength(255);
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                entity.Property(e => e.LastName).HasMaxLength(255);
+                b.Property<int?>("Age");
 
-                entity.Property(e => e.LengthOfEmployment).HasColumnType("decimal(3, 2)");
+                b.Property<string>("FirstName")
+                    .HasMaxLength(255);
 
-                entity.Property(e => e.Salary).HasColumnType("money");
+                b.Property<string>("LastName")
+                    .HasMaxLength(255);
+
+                b.Property<decimal?>("LengthOfEmployment")
+                    .HasColumnType("decimal(5, 2)");
+
+                b.Property<decimal?>("Salary")
+                    .HasColumnType("money");
+
+                b.HasKey("Id");
+
+                b.ToTable("Employee");
             });
         }
     }

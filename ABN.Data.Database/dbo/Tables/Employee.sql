@@ -4,7 +4,7 @@
     [LastName]           NVARCHAR (255) NULL,
     [Age]                INT            NULL,
     [Salary]             MONEY          NULL,
-    [LengthOfEmployment] DECIMAL (3, 2) NULL,
+    [LengthOfEmployment] DECIMAL (5, 2) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

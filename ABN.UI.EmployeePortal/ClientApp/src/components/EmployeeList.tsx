@@ -8,23 +8,17 @@ interface EmployeeRecordState {
     loading: boolean;
 }
 
-//here declaring the EmployeeList class. And this EmployeeList class inherits the abstract class React.Component
 export class EmployeeList extends React.Component<RouteComponentProps<{}>, EmployeeRecordState> {
 
-    //Declaring the constructor 
     constructor() {
 
-        //here we are calling base class constructor using super()
         super('');
 
-        //here we are intializing the interface's fields using default values.
         this.state = { EmployeeListData: [], loading: true };
 
-        //this fetch method is responsible to get all the Employee record using web api.
         fetch('api/Employee/Index')
             .then(response => response.json() as Promise<EmployeeListData[]>)
             .then(data => {
-                debugger
                 this.setState({ EmployeeListData: data, loading: false });
             });
 
@@ -33,11 +27,10 @@ export class EmployeeList extends React.Component<RouteComponentProps<{}>, Emplo
     }
 
 
-    //this method will render html onto the DOM.
     public render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : this.renderEmployeeTable(this.state.EmployeeListData);//this renderEmployeeTable method will return the HTML table. This table will display all the record.
+            : this.renderEmployeeTable(this.state.EmployeeListData);
         return <div>
             <h1>Employee Record</h1>
             <p>
@@ -46,12 +39,10 @@ export class EmployeeList extends React.Component<RouteComponentProps<{}>, Emplo
             {contents}
         </div>;
     }
-    // this method will be responsible for deleting the Employee record.
     private FuncDelete(id: number) {
-        if (!confirm("Do you want to delete Employee with this Id: " + id))
+        if (!window.confirm("Do you want to delete Employee with this Id: " + id))
             return;
         else {
-            //this fetch method will get the specific Employee record using Employee id.
             fetch('api/Employee/Delete/' + id, {
                 method: 'delete'
             }).then(data => {
@@ -65,12 +56,10 @@ export class EmployeeList extends React.Component<RouteComponentProps<{}>, Emplo
         }
     }
 
-    //this method will responsible for editing the specific Employee record.
     private FuncEdit(id: number) {
         this.props.history.push("/Employee/edit/" + id);
     }
 
-    //this method will return the html table to display all the Employee record with edit and delete methods.
     private renderEmployeeTable(EmployeeListData: EmployeeListData[]) {
         return <table className='table'>
             <thead>
